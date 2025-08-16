@@ -1,11 +1,11 @@
-var reverseWords = function(s) {
+var reverseWords = function (s) {
 
     let splitString = s.split(' ')
     let answer = [];
 
-    for( let i = 0; i < splitString.length; i ++){
+    for (let i = 0; i < splitString.length; i++) {
+        
         let reverseWords = splitString[i].split('').reverse().join('');
-        console.log(reverseWords);
         answer.push(reverseWords);
     }
 
