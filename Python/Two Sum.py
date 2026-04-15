@@ -5,8 +5,13 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        
+        map ={}
+
         for i in range(len(nums)):
-            for j in range(i + 1, len(nums)):
-                if nums[i] + nums[j] == target:
-                    return [i, j]
-            
+            current = nums[i]
+            complement = target - current
+            if complement in map:
+                return [map[complement],i]
+                
+            map[current] = i
