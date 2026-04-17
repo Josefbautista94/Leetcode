@@ -15,7 +15,6 @@ var isValid = function(s) {
 
         if(char in map){
             let top = stack.pop()
-            console.log(top)
             if(top !== map[char]){
                 return false
             }
